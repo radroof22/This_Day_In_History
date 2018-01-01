@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Choose Day
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+      <ion-label floating>Date (Ex. 2-27)</ion-label>
+      <ion-input type="text" [(ngModel)]="date"></ion-input>
+   </ion-item>
+   <button ion-button icon-left (click)="getDayInfo(date)" color="primary">
+     <ion-icon name="search"></ion-icon> 
+     Search
+    </button>
+
+   <br>
+
+   <ion-list>
+    <div *ngFor="let event of events">
+        
+        <ion-card>
+
+        <ion-card-header>
+          <button ion-button clear color="secondary" (click)="getViewLink(event.links[0].link)">{{event.year}}</button>
+        </ion-card-header>
+
+        <ion-card-content>
+          {{event.text}}
+        </ion-card-content>
+
+      </ion-card>
+      
+      
+    </div>
+  </ion-list>
+
+   <!--<ion-item>
+      <ion-label floating>Day (Day Number)</ion-label>
+      <ion-input type="text"></ion-input>
+   </ion-item>-->
+</ion-content>

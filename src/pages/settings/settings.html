@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Viewable Events</ion-list-header>
+
+    <ion-item>
+      <ion-label> Events </ion-label>
+      <ion-toggle [(ngModel)]="eventsShow"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Births </ion-label>
+      <ion-toggle [(ngModel)]="birthsShow"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Deaths </ion-label>
+      <ion-toggle [(ngModel)]="deathsShow"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

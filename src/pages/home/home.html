@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>This Day In History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to This Day In History!</h2>
+  <hr>
+  
+  <ion-list>
+    <div *ngFor="let event of events">
+      
+        <ion-card>
+
+        <ion-card-header>
+          <button ion-button clear  color="danger" (click)="getViewLink(event.links[0].link)">{{event.year}}</button>
+        </ion-card-header>
+
+        <ion-card-content>
+          {{event.text}}
+        </ion-card-content>
+
+      </ion-card>
+      
+    </div>
+  </ion-list>
+
+</ion-content>
